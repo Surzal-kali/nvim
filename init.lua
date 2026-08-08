@@ -1,5 +1,11 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
+require("copilot").setup({
+  panel = { enabled = true },
+  suggestion = { enabled = true },
+  filetypes = { yaml = true, markdown_down = true, help = false },
+})
+require("lazyvim.plugins.extras.editor.neo-tree")
 vim.cmd.colorscheme("tokyonight")
 
 vim.opt.clipboard = "unnamedplus" -- use system keyboard for yank
